@@ -1,8 +1,6 @@
-let visitorCount = localStorage.getItem("visitors");
+let visitorCount = +localStorage.getItem("visitors");
+localStorage.setItem("visitors", (visitorCount += 1));
 
-if (visitorCount === null) localStorage.setItem("visitors", 0);
-
-window.addEventListener("load", () => {
-  localStorage.setItem("visitors", visitorCount++);
-  console.log(visitorCount);
-});
+// Update visitor counter
+const counterEl = document.getElementById("counter");
+counterEl.innerText = visitorCount;
