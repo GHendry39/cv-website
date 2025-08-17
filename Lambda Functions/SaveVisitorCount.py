@@ -15,18 +15,17 @@ def lambda_handler(event, context):
     # Extract the visitor count from the 'event' data.
     # .get() is used to safely retrieve values, returning None if the key doesn't exist.
     browser_count = event.get('browserCount')
-    partition_key = event.get('id')
+    # partition_key = event.get('id')
 
-    # Prepare the data (item) to be stored in our DynamoDB table.
-    # Each key-value pair here represents an attribute in our database record.
-    item = {
-        'id': partition_key,  # This matches our Partition Key in DynamoDB
-        'visitor-count': browser_count
-    }
-
-    # Attempt to store the item in the DynamoDB table.
+        # Attempt to store the item in the DynamoDB table.
     try:
-        table.put_item(Item=item) # 'put_item' is the DynamoDB operation to add a new item.
+        table.update_item(
+    Key={'id': '1',},
+    UpdateExpression='SET visitorCount = :val1',
+    ExpressionAttributeValues={
+        ':val1': browser_count
+    }
+)
     except ClientError as e:
         # If there's an error storing data (e.g., permission issues), return a 500 error.
         return {
@@ -39,6 +38,9 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': json.dumps({
-            'message': 'Visitor Count stored successfully',
+            'message': 'Visitor Count updated successfully',
+            'result': {
+                'browserCount': browser_count
+            }
             })
     }
