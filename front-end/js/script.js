@@ -7,7 +7,7 @@
 
 // Define the API endpoint.
 const API_ENDPOINT =
-  "https://ngy5d143vj.execute-api.eu-west-2.amazonaws.com/dev/";
+  "https://90j8tk09la.execute-api.eu-west-2.amazonaws.com/dev";
 
 // Get references to our HTML element
 const counterEl = document.getElementById("counter");
@@ -19,14 +19,18 @@ console.log(visitorCount);
 //EventListener for window load event
 window.addEventListener("load", handleLoad);
 
-function handleLoad() {
+async function handleLoad() {
   const browserCount = visitorCount + 1;
   console.log(browserCount);
-  fetch(API_ENDPOINT, {
+  response = await fetch(API_ENDPOINT, {
     method: "POST", // We are sending data, so it's a POST request.
     headers: {
-      "Content-Type": "application/json", // Tell the API we're sending JSON data.
+      "content-type": "application/json",
     },
     body: JSON.stringify({ browserCount: browserCount }), // Convert our JavaScript object to a JSON string.
-  }).then();
+  });
+  console.log(response.json());
+
+  const newCount = response.result.message;
+  console.log(newCount);
 }

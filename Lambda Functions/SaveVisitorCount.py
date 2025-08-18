@@ -20,12 +20,12 @@ def lambda_handler(event, context):
         # Attempt to store the item in the DynamoDB table.
     try:
         table.update_item(
-    Key={'id': '1',},
-    UpdateExpression='SET visitorCount = :val1',
-    ExpressionAttributeValues={
-        ':val1': browser_count
-    }
-)
+            Key={'id': '1',},
+            UpdateExpression='SET visitorCount = :val1',
+            ExpressionAttributeValues={
+                ':val1': browser_count
+            }
+        )   
     except ClientError as e:
         # If there's an error storing data (e.g., permission issues), return a 500 error.
         return {
