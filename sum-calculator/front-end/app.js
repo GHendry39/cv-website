@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       num2: num2,
     };
 
+    console.log(JSON.stringify(requestData));
     // Use the Fetch API to send a POST request to our API Gateway endpoint.
     fetch(API_ENDPOINT, {
       method: "POST", // We are sending data, so it's a POST request.
