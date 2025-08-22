@@ -7,6 +7,7 @@ from botocore.exceptions import ClientError
 dynamodb = boto3.resource('dynamodb')
 # Specify the DynamoDB table we want to interact with. Make sure 'myTable' matches the name you created.
 table = dynamodb.Table('VisitorCount')
+browser_count = 0
 
 # This is the main function that Lambda will run when it's triggered.
 # 'event' contains the data sent to our Lambda function (e.g., the numbers from our frontend).
@@ -14,7 +15,7 @@ table = dynamodb.Table('VisitorCount')
 def lambda_handler(event, context):
     # Extract the visitor count from the 'event' data.
     # .get() is used to safely retrieve values, returning None if the key doesn't exist.
-    browser_count = event.get('browserCount')
+    # browser_count = event.get('browserCount')
     # partition_key = event.get('id')
 
         # Attempt to store the item in the DynamoDB table.
@@ -23,7 +24,7 @@ def lambda_handler(event, context):
             Key={'id': '1',},
             UpdateExpression='SET visitorCount = :val1',
             ExpressionAttributeValues={
-                ':val1': browser_count
+                ':val1': browser_count+1
             }
         )   
     except ClientError as e:
