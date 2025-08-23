@@ -7,7 +7,7 @@
 
 // Define the API endpoint.
 const API_ENDPOINT =
-  "https://zyo0kwfj31.execute-api.eu-west-2.amazonaws.com/dev";
+  "https://ps15yzu930.execute-api.eu-west-2.amazonaws.com/dev/SaveVisitorCount";
 
 // Get references to our HTML element
 const counterEl = document.getElementById("counter");
@@ -20,7 +20,7 @@ async function handleLoad() {
     method: "POST",
   });
   const data = await response.json();
-  const returnedData = JSON.parse(data.body).result.browserCount;
+  const returnedData = data.result.browserCount;
   // Update the visitor count on the page
   counterEl.innerText = returnedData;
 }
