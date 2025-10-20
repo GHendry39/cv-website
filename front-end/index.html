@@ -3,60 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>G.Hendry CV</title>
+    <title>Graeme Hendry CV</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
   </head>
   <header>
-    <p>Visitors: <span id="counter"></span></p>
-    <h1>Graeme Hendry</h1>
-    <h2>Web Developer/Certified Cloud Practitioner</h2>
-    <p>
-      Web:
-      <a href="https://ogmorevalleywebsites.co.uk"
-        >www.ogmorevalleywebsites.co.uk</a
+    <p class="visitor-count">Visitors: <span id="counter"></span></p>
+    <img
+      class="aws-badge"
+      src="./images/aws-certified-cloud-practitioner.png"
+      alt="AWS cloud practitioner badge"
+    />
+    <div class="title">
+      <div class="name">
+        <h1>Graeme Hendry</h1>
+        <h2>Web Developer/AWS Solutions Architect</h2>
+      </div>
+      <p>Bridgend, UK +44 7946 533132</p>
+      <a href="mailto:graeme@ogmorevalleywebsites.co.uk"
+        >email: graeme@ogmorevalleywebsites.co.uk</a
       >
-      /
-      <a href="https://ghendryaws.co.uk">www.ghendryaws.co.uk</a>
-    </p>
-    <p>Email: graeme@ogmorevalleywebsites.co.uk / admin@ghendryaws.co.uk</p>
-    <p>Phone: +44 7946 533132</p>
+      <a href="https://ogmorevalleywebsites.co.uk"
+        >Website: Ogmore Valley Websites</a
+      >
+      <a href="https://ghendryaws.co.uk">AWS Portfolio</a>
+      <a href="https://www.linkedin.com/in/graeme-hendry-619ba879/"
+        >LinkedIn Profile</a
+      >
+    </div>
+    <img
+      class="aws-badge"
+      src="./images/aws-certified-solutions-architect-associate.png"
+      alt="AWS solutions architect associate badge"
+    />
   </header>
   <body>
     <section class="container">
-      <h3>About Me</h3>
+      <h2>Profile</h2>
       <p>
-        I am a web developer with a passion for creating dynamic and responsive
-        websites. I have experience in various web technologies and am always
-        eager to learn more.
+        Experienced electronics/quality engineer transitioning to remote web
+        developer/AWS Solutions Architect. Passionate about learning new skills
+        and applying them to projects.
       </p>
     </section>
 
     <section class="container">
-      <h3>Skills</h3>
+      <h2>Technical Skills</h2>
       <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>React, Node.js</li>
-        <li>AWS Certified Cloud Practitioner</li>
-        <li>Responsive Design</li>
+        <li>Front-end: HTML, CSS, JavaScript, React.js, WordPress CMS</li>
+        <li>Back-end: Node.js, Python, REST API, MySQL, Amazon DynamoDB</li>
+        <li>Cloud: Serverless architecture, CDN, CI/CD with gitHub Actions</li>
       </ul>
     </section>
 
     <section class="container">
-      <h3>Experience</h3>
-      <p>
-        I have worked on multiple projects ranging from small business websites
-        to larger applications. My focus is on delivering high-quality code and
-        user-friendly interfaces.
-      </p>
+      <h2>Work Experience</h2>
+      <div class="job">
+        <h3 class="job-title">
+          Freelance Web Developer/AWS Solutions Architect
+        </h3>
+        <p class="dates">Jan 2023 - present</p>
+        <p>Ogmore Valley Websites, Bridgend, UK</p>
+        <ul>
+          <li>WordPress website development for friends and family.</li>
+          <li>
+            AWS Solutions Architect Associate certificate gained – see
+            <a href="#">AWS Certification Profile</a>
+          </li>
+          <li>Mentored and supported AWS students for 2 training cohorts.</li>
+          <li>
+            Development of AWS-hosted projects - see
+            <a href="https://www.ghendryaws.co.uk/">AWS Portfolio</a> .
+          </li>
+          <li>
+            Personal self-development in website coding, git repositories, linux
+            cli, SEO, GA4.
+          </li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3 class="job-title">Senior Electronics Engineer/Team Leader</h3>
+        <p class="dates">1991 - 2022</p>
+        <p>Panasonic Manufacturing (uk) Ltd, Cardiff, UK</p>
+        <ul>
+          <li>
+            Developed a team of 6 electrical/electronics/software engineers to
+            design/develop upwards of 100 consumer products using ISO9001
+            processes.
+          </li>
+          <li>
+            Developed a team of 5 multi-skilled engineers that reduced market
+            service costs on products by 90%.
+          </li>
+          <li>
+            Defined and documented service record analysis and project
+            management processes to manage over 50 improvement projects for
+            direct customers.
+          </li>
+          <li>
+            Managed the introduction of 20 automated product life testing
+            positions. Maintained and improved control software and hardware
+            based on VB.net and digital I/O.
+          </li>
+          <li>
+            Remote communication with international customers/suppliers and my
+            team.
+          </li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3 class="job-title">Design Consultant</h3>
+        <p class="dates">1988 - 1991</p>
+        <p>Quality Engineering Design, Abergavenny, UK</p>
+        <ul>
+          <li>Technical authority for ASIC-based designs.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3 class="job-title">Graduate Trainee</h3>
+        <p class="dates">1986 - 1988</p>
+        <p>AB Electronic Products PLC, Abercynon, UK</p>
+        <ul>
+          <li>Successfully completed company Graduate Training scheme.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="container">
-      <h3>Education</h3>
-      <p>
-        Bachelor's Degree in Electrical and Electronic Engineering from Glasgow
-        University.
-      </p>
+      <h2>Education and Certification</h2>
+      <ul>
+        <div>
+          <li class="certs">
+            AWS Solutions Architect Associate, e-Careers, on-line
+          </li>
+          <p class="dates">2023 - 2025</p>
+        </div>
+        <div>
+          <li class="certs">
+            BSc Electrical and Electronics Engineering, University of Glasgow,
+            UK
+          </li>
+          <p class="dates">1982 - 1986</p>
+        </div>
+      </ul>
     </section>
 
     <footer>
