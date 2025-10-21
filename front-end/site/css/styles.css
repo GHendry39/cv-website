@@ -8,7 +8,7 @@
 /* Global Styles */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f4f4f4;
   color: #333;
   margin: auto;
@@ -47,6 +47,7 @@ li {
 }
 
 /* Header */
+
 header {
   background-color: lightgray;
   padding: 2rem 0;
@@ -75,6 +76,7 @@ header {
 }
 
 /* Main Content */
+
 .container {
   width: 80%;
   margin: auto;
